@@ -1,7 +1,6 @@
 fetch("https://hi-tech-fab.herokuapp.com/data")
   .then(response => response.json())
   .then(json => {
-    // Home Section
     let homeTitle = document.getElementById("home-title");
     homeTitle.innerHTML =
       json.home[0].title +
@@ -10,8 +9,7 @@ fetch("https://hi-tech-fab.herokuapp.com/data")
 
     let subtitle = document.getElementById("subtitle");
     subtitle.innerHTML = json.home[0].subtitle;
-
-    // About Section
+    
     let about = document.getElementById("about-content");
 
     let title = document.createElement("h3");
@@ -37,7 +35,6 @@ fetch("https://hi-tech-fab.herokuapp.com/data")
     list.append(item1, item2, item3);
     about.append(title, desc1, list, desc2);
 
-    // Contact Section
     let address = document.getElementsByClassName("address");
     let open = document.getElementsByClassName("open-hours");
     let email = document.getElementsByClassName("email");
