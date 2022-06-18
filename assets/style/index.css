@@ -56,7 +56,6 @@ h6 {
 
 .navbar {
     padding: 0;
-    --bs-bg-opacity: 1;
     background-color: transparent !important;
 }
 
@@ -111,6 +110,40 @@ h6 {
     .navbar ul {
         align-items: flex-end;
     }
+}
+
+#back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 996;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    border: 2px solid #cda45e;
+}
+
+#back-to-top i {
+    font-size: 28px;
+    color: #cda45e;
+    line-height: 0;
+}
+
+#back-to-top:hover {
+    background: #cda45e;
+    color: #1a1814;
+}
+
+#back-to-top:hover i {
+    color: #444444;
+}
+
+#back-to-top.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 #header .send-message-btn {
@@ -286,6 +319,53 @@ h6 {
     border-radius: 0;
 }
 
+.video {
+    display: none;
+    position: fixed;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #0c0b09;
+}
+
+.video-content {
+    position: relative;
+    background: transparent;
+    border-style: none;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    video {
+        width: 60%;
+        height: auto;
+    }
+}
+
 @media (max-width: 992px) {
     #home .play-btn {
         margin-top: 30px;
@@ -315,16 +395,20 @@ h6 {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 392px) {
+    #home span {
+        display: block;
+    }
 
     #home .product-btn,
     #home .send-message-btn {
+        width: 200px;
         display: block;
+        margin: 0 auto;
     }
 
     #home .send-message-btn {
         margin-top: 15px;
-        margin-left: 0;
     }
 }
 
@@ -456,13 +540,19 @@ section {
 .carousel-item>img {
     width: 100%;
     height: 350px;
-    background: rgba(238, 238, 238, 0.913);
+    background: #DDDDDD;
     transition: all ease-in-out 0.4s;
 }
 
 .product-item>img:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 8px -4px
+}
+
+@media (min-width: 600px) and (max-width:768px) {
+    #products img {
+        height: 400px;
+    }
 }
 
 #contact {
@@ -551,6 +641,24 @@ section {
     transition: 0.3s;
 }
 
+#contact #form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+#contact #form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
 #contact .email-form button[type=submit]:hover {
     background: #d3af71;
 }
@@ -560,56 +668,10 @@ section {
     padding: 0 0 30px 0;
     color: #fff;
     font-size: 14px;
+    border-top: 1px solid #37332a
 }
 
 #footer .copyright {
     text-align: center;
     padding-top: 30px;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 998;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background: #0c0b09;
-}
-
-.modal-content {
-    position: relative;
-    background: transparent;
-    border-style: none;
-    margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 1200px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-@media (max-width: 600px) {
-    video {
-        width: 60%;
-        height: auto;
-    }
 }

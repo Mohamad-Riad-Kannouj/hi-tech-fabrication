@@ -40,13 +40,31 @@ function hideNav() {
 }
 
 let vid = document.getElementById("video");
-function openModel() {
+function openVideo() {
+  vid.currentTime = 0;
   vid.play();
   vid.muted = true;
-  document.getElementById("myModal").style.display = "block";
+  document.getElementById("myVideo").style.display = "block";
 }
 
-function closeModal() {
+function closeVideo() {
   vid.pause();
-  document.getElementById("myModal").style.display = "none";
+  document.getElementById("myVideo").style.display = "none";
 }
+
+let backtotop = document.getElementById("back-to-top");
+setInterval(() => {
+  if (backtotop) {
+    const toggleBacktotop = () => {
+      if (window.scrollY > 100) {
+        backtotop.classList.add("active");
+      } else {
+        backtotop.classList.remove("active");
+      }
+    };
+    window.addEventListener("load", toggleBacktotop);
+    onscroll(document, toggleBacktotop);
+  }
+}, 300);
+
+// let mediaQueryList = window.matchMedia("(max-width: 600px)");
