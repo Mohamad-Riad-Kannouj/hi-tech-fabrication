@@ -40,7 +40,7 @@ h6 {
     font-weight: 600;
     border-left: 3px solid #cda45e;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-family: "Poppins", sans-serif;
 }
 
@@ -538,8 +538,9 @@ section {
 
 .product-item>img,
 .carousel-item>img {
-    width: 100%;
-    height: 350px;
+    min-width: 100%;
+    width: 400px;
+    height: 250px;
     background: #DDDDDD;
     transition: all ease-in-out 0.4s;
 }
@@ -555,9 +556,30 @@ section {
     }
 }
 
+@media (max-width:600px) {
+    #products img {
+        width: 100%;
+        height: 300px;
+    }
+}
+
 #contact {
     background-color: #0c0b09;
     padding-top: 80px;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 400px;
+    width: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 100%;
+    width: 100%;
 }
 
 #contact .info {
@@ -671,7 +693,31 @@ section {
     border-top: 1px solid #37332a
 }
 
+#footer .social-links a {
+    font-size: 18px;
+    background: #28251f;
+    color: #fff;
+    line-height: 1;
+    padding: 8px 0;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+    background: #cda45e;
+    color: #fff;
+    text-decoration: none;
+}
+
 #footer .copyright {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 15px;
+
+}
+
+#footer .copyright span {
+    color: #cda45e;
 }

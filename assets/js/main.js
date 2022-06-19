@@ -43,7 +43,7 @@ let vid = document.getElementById("video");
 function openVideo() {
   vid.currentTime = 0;
   vid.play();
-  vid.muted = true;
+  vid.muted = false;
   document.getElementById("myVideo").style.display = "block";
 }
 
@@ -67,4 +67,18 @@ setInterval(() => {
   }
 }, 300);
 
-// let mediaQueryList = window.matchMedia("(max-width: 600px)");
+function ScrollToMessage() {
+  window.scrollTo(0, 3200);
+}
+
+function copyValue() {
+  var phoneNum = document.getElementById("phone");
+  console.log(phoneNum);
+  console.log(phoneNum.innerText);
+  navigator.clipboard.writeText(phoneNum.innerText);
+
+  document.querySelector(".phone h4").innerHTML =
+    "Call: <span class='text-success'>copied</span>";
+
+  document.querySelector(".phone i").removeAttribute("onmouseover");
+}

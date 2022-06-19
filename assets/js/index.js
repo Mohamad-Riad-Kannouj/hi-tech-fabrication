@@ -9,7 +9,7 @@ fetch("https://hi-tech-fab.herokuapp.com/data")
 
     let subtitle = document.getElementById("subtitle");
     subtitle.innerHTML = json.home[0].subtitle;
-    
+
     let about = document.getElementById("about-content");
 
     let title = document.createElement("h3");
@@ -55,5 +55,6 @@ fetch("https://hi-tech-fab.herokuapp.com/data")
 
     let telephone = document.createElement("p");
     telephone.innerHTML = json.contact[0].telephone;
+    telephone.id = "phone";
     phone[0].appendChild(telephone);
   });

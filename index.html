@@ -9,6 +9,11 @@
     <link rel="preload" href="assets/js/index.js" as="script" />
 
     <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
     />
@@ -32,7 +37,7 @@
         <h1
           class="logo d-flex align-items-center justify-content-lg-between me-auto me-lg-0"
         >
-          <a href="index.html">Hi-Tech Fab</a>
+          <a href="index.html">Hi-Tech Fabrication</a>
         </h1>
 
         <nav
@@ -80,7 +85,9 @@
             </ul>
           </div>
         </nav>
-        <a href="#contact" class="send-message-btn d-none d-lg-flex"
+        <a
+          href="javascript:ScrollToMessage()"
+          class="send-message-btn d-none d-lg-flex"
           >Send a message</a
         >
       </div>
@@ -93,7 +100,9 @@
             <h2 id="subtitle"></h2>
             <div class="btns">
               <a href="#products" class="product-btn">Our products</a>
-              <a href="#contact" class="send-message-btn">Send a message</a>
+              <a href="javascript:ScrollToMessage()" class="send-message-btn"
+                >Send a message</a
+              >
             </div>
           </div>
 
@@ -220,6 +229,30 @@
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="12"
+            aria-label="Slide 13"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="13"
+            aria-label="Slide 14"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="14"
+            aria-label="Slide 15"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="15"
+            aria-label="Slide 16"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="0"
             aria-current="true"
             aria-label="Slide 1"
@@ -283,6 +316,18 @@
           <div class="col-lg-3 col-md-4 product-item">
             <img class="img-fluid" src="assets/img/img_12.png" alt="product" />
           </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_13.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_14.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_15.png" alt="product" />
+          </div>
+          <div class="col-lg-3 col-md-4 product-item">
+            <img class="img-fluid" src="assets/img/img_16.png" alt="product" />
+          </div>
         </div>
         <button
           class="carousel-control-prev d-none carousel-btn"
@@ -311,7 +356,25 @@
           <p>Contact Us</p>
         </div>
       </div>
-      <div class="container">
+      <div class="container-fluid mapouter">
+        <div class="gmap_canvas">
+          <iframe
+            width="100%"
+            height="400"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=Mahjar%20Suhi%20Fakher%20Eddine%20bldg,%20Tripoli&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="yes"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe
+          ><a href="https://www.online-timer.net"></a><br /><a
+            href="https://www.embedgooglemap.net"
+            >google maps plugin html</a
+          >
+        </div>
+      </div>
+      <div class="container pt-4">
         <div class="row mt-4">
           <div class="col-lg-4">
             <div class="info">
@@ -331,16 +394,16 @@
               </div>
 
               <div class="phone">
-                <i class="bi bi-phone"></i>
+                <i onmouseover="copyValue()" class="bi bi-phone"></i>
                 <h4>Call:</h4>
               </div>
             </div>
           </div>
-
+          <!-- action="https://hi-tech-fab.herokuapp.com/send" -->
           <div class="col-lg-8 mt-5 mt-lg-0">
             <form
               id="form"
-              action="https://hi-tech-fab.herokuapp.com/send"
+              action="http://localhost:5000/send"
               method="post"
               role="form"
               class="email-form"
@@ -408,6 +471,24 @@
     </section>
     <footer id="footer">
       <div class="container">
+        <div
+          class="social-links d-flex justify-content-center align-items-center gap-3 mt-4"
+        >
+          <!-- <a href="#" class="facebook"><i class="bx bxl-whatsapp"></i></a> -->
+          <a
+            href="https://www.instagram.com/hitechfabrication/"
+            class="instagram"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/mwlite/in/fawaz-abdul-hadi-75ab28b2"
+            class="linkedin"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="javascript:ScrollToMessage()" class="google-plus"
+            ><i class="bx bxs-envelope"></i
+          ></a>
+        </div>
         <div class="copyright">
           &copy; Copyright <strong><span>Hi-Tech Fabrication</span></strong
           >.<br />All Rights Reserved
@@ -415,7 +496,7 @@
       </div>
     </footer>
     <a
-      href="#"
+      href="#home"
       id="back-to-top"
       class="d-flex align-items-center justify-content-center"
       ><i class="bi bi-arrow-up-short"></i
