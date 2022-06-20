@@ -68,7 +68,7 @@ setInterval(() => {
 }, 300);
 
 function ScrollToMessage() {
-  window.scrollTo(0, 3200);
+  window.scrollTo(0, 3000);
 }
 
 function copyValue() {
