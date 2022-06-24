@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hi Tech Fabrication</title>
-
     <link rel="preload" href="assets/style/style.css" as="style" />
     <link rel="preload" href="assets/js/index.js" as="script" />
-
     <link
       href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
@@ -31,6 +28,22 @@
     <link rel="stylesheet" href="assets/style/style.css" />
   </head>
   <body>
+    <div id="topbar" class="d-flex align-items-center">
+      <div
+        class="container d-flex align-items-center justify-content-center justify-content-lg-start"
+      >
+        <div class="d-flex align-items-center">
+          <a href="https://www.instagram.com/hitechfabrication/"
+            ><i class="bx bxl-instagram"></i><span>Instagram</span></a
+          >
+        </div>
+        <div class="d-flex align-items-center">
+          <a href="https://www.linkedin.com/mwlite/in/fawaz-abdul-hadi-75ab28b2"
+            ><i class="bx bxl-linkedin"></i><span>Linkedin</span></a
+          >
+        </div>
+      </div>
+    </div>
     <header id="header" class="fixed-top d-flex align-items-center">
       <div
         class="container-fluid container-xl d-flex align-items-center justify-content-lg-between"
@@ -383,24 +396,20 @@
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
               </div>
-
               <div class="open-hours">
                 <i class="bi bi-clock"></i>
                 <h4>Open Hours:</h4>
               </div>
-
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
               </div>
-
               <div class="phone">
                 <i onmouseover="copyValue()" class="bi bi-phone"></i>
                 <h4>Call:</h4>
               </div>
             </div>
           </div>
-
           <div class="col-lg-8 mt-5 mt-lg-0">
             <form
               id="form"
@@ -420,7 +429,6 @@
                     required
                   />
                 </div>
-
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input
                     type="email"
@@ -432,7 +440,6 @@
                   />
                 </div>
               </div>
-
               <div class="form-group mt-3">
                 <input
                   type="text"
@@ -443,7 +450,6 @@
                   required
                 />
               </div>
-
               <div class="form-group mt-3">
                 <textarea
                   class="form-control"
@@ -454,14 +460,12 @@
                   required
                 ></textarea>
               </div>
-
               <div class="my-3">
                 <div class="error-message">Oops! Form submission failed.</div>
                 <div class="sent-message">
                   Your message has been sent. Thank you!
                 </div>
               </div>
-
               <div class="text-center">
                 <button type="submit">Send Message</button>
               </div>
@@ -472,23 +476,6 @@
     </section>
     <footer id="footer">
       <div class="container">
-        <div
-          class="social-links d-flex justify-content-center align-items-center gap-3 mt-4"
-        >
-          <a
-            href="https://www.instagram.com/hitechfabrication/"
-            class="instagram"
-            ><i class="bx bxl-instagram"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/mwlite/in/fawaz-abdul-hadi-75ab28b2"
-            class="linkedin"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a href="javascript:ScrollToMessage()" class="envelope"
-            ><i class="bx bxs-envelope"></i
-          ></a>
-        </div>
         <div class="copyright">
           &copy; Copyright <strong><span>Hi-Tech Fabrication</span></strong
           >.<br />All Rights Reserved

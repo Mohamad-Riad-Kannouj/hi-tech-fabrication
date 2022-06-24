@@ -1,17 +1,13 @@
 function handleFormSubmit(event) {
   event.preventDefault();
-
   const form = event.currentTarget;
   const url = form.action;
   const formData = new FormData(form);
-
   email_form_submit(form, url, formData);
 }
-
 function email_form_submit(form, url, formData) {
   const plainFormData = Object.fromEntries(formData.entries());
   const formDataJsonString = JSON.stringify(plainFormData);
-
   fetch(url, {
     method: "POST",
     body: formDataJsonString,
@@ -41,6 +37,5 @@ function email_form_submit(form, url, formData) {
       form.querySelector(".error-message").classList.add("d-block");
     });
 }
-
 const form = document.getElementById("form");
 form.addEventListener("submit", handleFormSubmit);
